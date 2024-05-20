@@ -23,7 +23,7 @@ public class LoginPage {
 		dr.findElement(pw).sendKeys("test@123");
 		dr.findElement(signInButton).click();
 	       Thread.sleep(2000);
-	String ac=dr.findElement(By.xpath("//div[@class='header']")).getText();
-		System.out.println(ac);
+	mainPage mp= new mainPage(dr);
+	mp.assertandPrintvalue();
 		}
 }
